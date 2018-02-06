@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.week7i.share</groupId>
-  <artifactId>spring_share</artifactId>
+  <artifactId>springmvc-mini</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>spring_share Maven Webapp</name>
+  <name>springmvc-mini Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <properties>
     <spring.version>4.3.6.RELEASE</spring.version>
@@ -32,6 +32,6 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>spring_share</finalName>
+    <finalName>springmvc-mini</finalName>
   </build>
 </project>

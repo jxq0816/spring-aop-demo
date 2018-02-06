@@ -1,4 +1,4 @@
-package com.week7i.share;
+package com.weeking.share;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
