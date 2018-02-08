@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-4.3.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.weeking.share"/>
+
+    <!-- 被代理对象 -->
+    <bean id="math" class="com.weeking.share.service.aop01.MathUtils"></bean>
+    <!-- 通知 -->
+    <bean id="advices" class="com.weeking.share.service.aop01.Advice"></bean>
+
+    <aop:config proxy-target-class="true">
+        <!--切面 -->
+        <aop:aspect ref="advices">
+            <!-- 切点 -->
+            <aop:pointcut expression="execution(public * com.weeking.share.service.aop01.MathUtils.*(..))" id="pointcut1"/>
+            <!--连接通知方法与切点 -->
+            <aop:before method="before" pointcut-ref="pointcut1"/>
+            <aop:after method="after" pointcut-ref="pointcut1"/>
+        </aop:aspect>
+
+    </aop:config>
+    
+</beans>
