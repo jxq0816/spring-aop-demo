@@ -20,7 +20,7 @@
                 expression="execution(public * com.weeking.share.service.aop02.service.LoginService.*(..)) and @annotation(com.weeking.share.service.aop02.annotion.Operate)"
                 id="operatePoint"/>
         <aop:aspect id="adviceRespect" ref="noticePlatform" order="1">
-            <aop:before pointcut-ref="operatePoint" method="doAfter"/>
+            <aop:after pointcut-ref="operatePoint" method="doAfter"/>
         </aop:aspect>
 
     </aop:config>

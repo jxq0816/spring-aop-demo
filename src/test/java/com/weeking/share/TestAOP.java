@@ -1,6 +1,7 @@
 package com.weeking.share;
 
 import com.weeking.share.service.aop01.MathUtils;
+import com.weeking.share.service.aop02.service.LoginService;
 import com.weeking.share.service.aop03.MathService;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -17,6 +18,13 @@ public class TestAOP {
         math.sub(n1, n2);
         math.mut(n1, n2);
         math.div(n1, n2);
+    }
+
+    @Test
+    public void testAop02() {
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:applicationContext-aop-02.xml");
+        LoginService service = (LoginService)ctx.getBean(LoginService.class);
+        service.login("jiang");
     }
 
     @Test
