@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.week7i.share</groupId>
-  <artifactId>springmvc-mini</artifactId>
+  <artifactId>spring-aop-demo</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>springmvc-mini Maven Webapp</name>
+  <name>spring-aop-demo Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <properties>
     <spring.version>4.3.6.RELEASE</spring.version>
@@ -30,8 +30,28 @@
       <artifactId>jstl</artifactId>
       <version>1.2</version>
     </dependency>
+
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>1.8.13</version>
+    </dependency>
+
+    <dependency>
+      <groupId>cglib</groupId>
+      <artifactId>cglib</artifactId>
+      <version>3.2.4</version>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+      <version>4.10</version>
+
+    </dependency>
   </dependencies>
   <build>
-    <finalName>springmvc-mini</finalName>
+    <finalName>spring-aop-demo</finalName>
   </build>
 </project>
