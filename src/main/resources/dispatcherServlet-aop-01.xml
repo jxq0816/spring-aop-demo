@@ -13,7 +13,7 @@
     <!-- 被代理对象 -->
     <bean id="math" class="com.weeking.share.service.aop01.MathUtils"></bean>
     <!-- 通知 -->
-    <bean id="aspect" class="com.weeking.share.service.aop01.AspectProxy"></bean>
+    <bean id="aspect01" class="com.weeking.share.service.aop01.AspectProxy"></bean>
 
     <!--proxy-target-class属性值决定是基于接口的还是基于类的代理被创建。-->
     <!--如果proxy-target-class 属性值被设置为true，那么基于类的代理将起作用（这时需要cglib库）。-->
@@ -22,7 +22,7 @@
         <!-- 切点 -->
         <aop:pointcut id="pointCut" expression="execution(public * com.weeking.share.service.aop01.MathUtils.*(..))" />
         <!--切面 -->
-        <aop:aspect ref="aspect">
+        <aop:aspect ref="aspect01">
             <!--连接通知方法与切点 -->
             <aop:before method="before" pointcut-ref="pointCut"/>
             <aop:after method="after" pointcut-ref="pointCut"/>

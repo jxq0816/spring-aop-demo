@@ -7,7 +7,7 @@ import org.aspectj.lang.reflect.MethodSignature;
 
 import java.lang.reflect.Method;
 
-public class AspectProxy {
+public class AspectProxy02 {
 
 	public void doAfter(JoinPoint jp) throws NoSuchMethodException, SecurityException {
 		System.out.println("---------- AOP02 after execute ----------");

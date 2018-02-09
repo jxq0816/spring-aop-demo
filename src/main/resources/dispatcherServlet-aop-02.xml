@@ -3,15 +3,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
+       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
                http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
-       http://www.springframework.org/schema/context 
+       http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:component-scan base-package="com.weeking.share"/>
-
-    <bean id="aspectProxy" class="com.weeking.share.service.aop02.AspectProxy"></bean>
 
     <aop:config>
 
@@ -21,14 +19,12 @@
                 id="pointCut"/>
         <!--定义切面 当执行同一个切入点时，不同切面的执行先后顺序是由“每个切面的order属性”而定的.
         order越小，则该该切面中的通知越先被执行。-->
-        <aop:aspect  ref="aspectProxy" order="1">
+        <aop:aspect  ref="aspectProxy02" order="1">
             <!--连接通知方法与切点-->
-            <aop:after pointcut-ref="pointCut" method="doAfter"/>
+            <aop:after method="doAfter" pointcut-ref="pointCut" />
         </aop:aspect>
 
     </aop:config>
 
-
-    
-    
+    <bean id="aspectProxy02" class="com.weeking.share.service.aop02.AspectProxy02"></bean>
 </beans>
