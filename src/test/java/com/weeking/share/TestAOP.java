@@ -30,7 +30,7 @@ public class TestAOP {
     @Test
     public void testAop03() {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:applicationContext-aop-03.xml");
-        MathService math = ctx.getBean("math", MathService.class);
+        MathService math = ctx.getBean(MathService.class);
         int n1 = 100, n2 = 5;
         math.add(n1, n2);
         math.sub(n1, n2);

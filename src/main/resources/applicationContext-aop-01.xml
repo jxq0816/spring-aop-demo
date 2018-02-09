@@ -19,10 +19,10 @@
         <!--切面 -->
         <aop:aspect ref="advices">
             <!-- 切点 -->
-            <aop:pointcut expression="execution(public * com.weeking.share.service.aop01.MathUtils.*(..))" id="pointcut1"/>
+            <aop:pointcut expression="execution(public * com.weeking.share.service.aop01.MathUtils.*(..))" id="pointCut01"/>
             <!--连接通知方法与切点 -->
-            <aop:before method="before" pointcut-ref="pointcut1"/>
-            <aop:after method="after" pointcut-ref="pointcut1"/>
+            <aop:before method="before" pointcut-ref="pointCut01"/>
+            <aop:after method="after" pointcut-ref="pointCut01"/>
         </aop:aspect>
 
     </aop:config>

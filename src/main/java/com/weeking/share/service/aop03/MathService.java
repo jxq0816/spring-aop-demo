@@ -2,7 +2,7 @@ package com.weeking.share.service.aop03;
 
 import org.springframework.stereotype.Service;
 
-@Service("math")
+@Service
 public class MathService {
     //加
     public int add(int n1,int n2){

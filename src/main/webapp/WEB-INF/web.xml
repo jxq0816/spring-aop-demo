@@ -9,7 +9,10 @@
    <!-- applicationContext.xml默认地址目录是/WEB-INF-->
     <param-name>contextConfigLocation</param-name>
     <param-value>
+      classpath:/applicationContext.xml
+      classpath:/applicationContext-aop-01.xml
       classpath:/applicationContext-aop-02.xml
+      classpath:/applicationContext-aop-03.xml
     </param-value>
   </context-param>
 
