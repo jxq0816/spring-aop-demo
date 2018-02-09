@@ -9,7 +9,8 @@ public class LoginService {
 
     @Operate(status= OperateEnum.USERNAME)
     public String login(String username){
-        System.out.println("username:"+username);
+
+        System.out.println("login service username:"+username);
         return username;
     }
 }
