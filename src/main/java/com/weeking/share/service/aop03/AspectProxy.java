@@ -17,7 +17,7 @@ import java.lang.reflect.Method;
  */
 @Component
 @Aspect
-public class Advice {
+public class AspectProxy {
     @Before("execution(* com.weeking.share.service.aop03.MathService.*(..))")
     public void before(JoinPoint jp){
         System.out.println("---------- AOP03 before execute ----------");

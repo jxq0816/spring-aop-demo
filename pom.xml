@@ -31,12 +31,16 @@
       <version>1.2</version>
     </dependency>
 
+    <!--AOP-->
+
     <dependency>
       <groupId>org.aspectj</groupId>
       <artifactId>aspectjweaver</artifactId>
       <version>1.8.13</version>
     </dependency>
 
+    <!--Code Generation Library 是一个强大的，高性能，高质量的Code生成类库，它可以在运行期扩展Java类与实现Java接口
+    它广泛的被许多AOP的框架使用，例如Spring AOP和dynaop，为他们提供方法的interception（拦截）-->
     <dependency>
       <groupId>cglib</groupId>
       <artifactId>cglib</artifactId>
@@ -48,8 +52,8 @@
       <artifactId>junit</artifactId>
       <scope>test</scope>
       <version>4.10</version>
-
     </dependency>
+
   </dependencies>
   <build>
     <finalName>spring-aop-demo</finalName>

@@ -9,27 +9,26 @@
        http://www.springframework.org/schema/context 
        http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:annotation-config/>
-    <aop:aspectj-autoproxy/>
-
-
     <context:component-scan base-package="com.weeking.share"/>
+
+    <bean id="aspectProxy" class="com.weeking.share.service.aop02.AspectProxy"></bean>
 
     <aop:config>
 
         <!--定义切点-->
         <aop:pointcut
                 expression="execution(public * com.weeking.share.service.aop02.service.LoginService.*(..)) and @annotation(com.weeking.share.service.aop02.annotion.Operate)"
-                id="operatePoint"/>
-        <!--定义切面-->
-        <aop:aspect id="adviceRespect" ref="noticePlatform" order="1">
-            <!--定义Advice通知方法-->
-            <aop:after pointcut-ref="operatePoint" method="doAfter"/>
+                id="pointCut"/>
+        <!--定义切面 当执行同一个切入点时，不同切面的执行先后顺序是由“每个切面的order属性”而定的.
+        order越小，则该该切面中的通知越先被执行。-->
+        <aop:aspect  ref="aspectProxy" order="1">
+            <!--连接通知方法与切点-->
+            <aop:after pointcut-ref="pointCut" method="doAfter"/>
         </aop:aspect>
 
     </aop:config>
 
-    <bean id="noticePlatform" class="com.weeking.share.service.aop02.OperateProxy"></bean>
+
     
     
 </beans>
