@@ -10,9 +10,6 @@
     <param-name>contextConfigLocation</param-name>
     <param-value>
       classpath:/applicationContext.xml
-      classpath:/applicationContext-aop-01.xml
-      classpath:/applicationContext-aop-02.xml
-      classpath:/applicationContext-aop-03.xml
     </param-value>
   </context-param>
 
@@ -26,7 +23,12 @@
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     <init-param>
       <param-name>contextConfigLocation</param-name>
-      <param-value>classpath:/dispatcherServlet.xml</param-value>
+      <param-value>
+        classpath:/dispatcherServlet.xml
+        classpath:/dispatcherServlet-aop-01.xml
+        classpath:/dispatcherServlet-aop-02.xml
+        classpath:/dispatcherServlet-aop-03.xml
+      </param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>

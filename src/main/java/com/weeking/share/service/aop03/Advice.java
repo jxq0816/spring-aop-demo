@@ -20,7 +20,7 @@ import java.lang.reflect.Method;
 public class Advice {
     @Before("execution(* com.weeking.share.service.aop03.MathService.*(..))")
     public void before(JoinPoint jp){
-        System.out.println("----------before execute 03----------");
+        System.out.println("---------- AOP03 before execute ----------");
         MethodSignature signature = (MethodSignature) jp.getSignature();
         Method method = signature.getMethod();
         System.out.println("method : "+method.getName());
@@ -36,6 +36,6 @@ public class Advice {
 
     @After("execution(* com.weeking.share.service.aop03.MathService.*(..))")
     public void after(JoinPoint jp){
-        System.out.println("----------after execute 03----------");
+        System.out.println("---------- AOP03 after execute ----------");
     }
 }

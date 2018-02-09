@@ -10,7 +10,7 @@ import java.lang.reflect.Method;
 public class OperateProxy{
 
 	public void doAfter(JoinPoint jp) throws NoSuchMethodException, SecurityException {
-
+		System.out.println("---------- AOP02 after execute ----------");
 		MethodSignature signature = (MethodSignature) jp.getSignature();
 		Method method = signature.getMethod();
 		System.out.println("method : "+method.getName());
@@ -29,6 +29,5 @@ public class OperateProxy{
 			}
 		}
 		System.out.println();
-		System.out.println("do after end");
 	}
 }
