@@ -24,8 +24,13 @@ public class LoginController {
 
     @RequestMapping(value = "/login")
     public String login(){
-        //ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:applicationContext-aop-02.xml");
-        //LoginService loginService = (LoginService)ctx.getBean(LoginService.class);
+        String username=loginService.login("jiangxingqi");
+        return "login";
+    }
+    @RequestMapping(value = "/login2")
+    public String login2(){
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:applicationContext-aop-02.xml");
+        LoginService loginService = (LoginService)ctx.getBean(LoginService.class);
         String username=loginService.login("jiangxingqi");
         return "login";
     }
