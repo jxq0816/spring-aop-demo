@@ -1,7 +1,5 @@
 package com.weeking.share.service.aop03;
 
-import com.weeking.share.service.aop02.annotion.Operate;
-import com.weeking.share.service.aop02.ennum.OperateEnum;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
@@ -12,7 +10,7 @@ import org.springframework.stereotype.Component;
 import java.lang.reflect.Method;
 
 /**
- * 通知类，横切逻辑
+ * 切面类，通知方法
  *
  */
 @Component
